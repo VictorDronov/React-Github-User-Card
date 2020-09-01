@@ -11,13 +11,15 @@ html {
 img {
   max-width: 200px;
   border-radius: 50%;
-  box-shadow: 0px 5px 20px #272932;
+  box-shadow: 0px 5px 10px #272932;
+  border: 5px whitesmoke solid;
 }
 .userCard {
   padding: 3%;
   box-shadow: 5px 5px 10px #b6c2d946;
   background-color: #b6c2d9;
   border-radius: 15px;
+  border: 5px whitesmoke solid;
   width: 80%;
   margin: auto;
 }
@@ -25,20 +27,32 @@ header {
   background-color: #b6c2d9;
   border-radius: 15px;
   box-shadow: 0px 4px 6px 0px #b6c2d96b;
-  width: 100%;
+  width: 95%;
+  margin: auto;
   padding: 1% 0%;
   margin-bottom: 3%;
+  border: 5px whitesmoke solid;
 }
 
 .followerCard {
   padding: 3%;
-  box-shadow: 5px 5px 10px #b6c2d946;
-  background-color: #9ba7bd;
+  box-shadow: 5px 5px 10px #b6c2d96b;
+  background-color: #b6c2d9;
   border-radius: 15px;
   width: 80%;
   margin: 3% auto;
+  border: 5px whitesmoke solid;
 }
 
-Link {
+.link {
   text-decoration: none;
+  border: 2px white solid;
+  padding: 0.5%;
+  border-radius: 20px;
+  background-color: #808a9f;
+  color: white;
+}
+
+.link:hover{
+    padding: 0.45%;
 }

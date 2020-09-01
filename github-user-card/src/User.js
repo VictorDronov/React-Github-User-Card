@@ -9,7 +9,9 @@ const User = (props) => {
     <div>
       <header>
         <h1>Github User</h1>
-        <Link to="/">Home</Link>
+        <Link className="link" to="/">
+          Home
+        </Link>
       </header>
       <div className="userCard">
         <img src={userDetails.avatar_url} alt="Users Profile" />
@@ -19,8 +21,13 @@ const User = (props) => {
             GitHub: <a href={userDetails.html_url}>Profile</a>
           </p>
           <p>Bio: {userDetails.bio}</p>
+          <p>Location: {userDetails.location}</p>
           <p>Followers: {userDetails.followers}</p>
-          <Link to="/followers">See Followers</Link>
+          <div>
+            <Link className="link" to="/followers">
+              See Followers
+            </Link>
+          </div>
           <p>Following: {userDetails.following}</p>
         </div>
       </div>

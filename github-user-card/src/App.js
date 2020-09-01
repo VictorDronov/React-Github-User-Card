@@ -48,6 +48,7 @@ class App extends React.Component {
 
   render() {
     // console.log("render");
+    console.log(this.state.usersFollowers);
     return (
       <div className="App">
         <Switch>
