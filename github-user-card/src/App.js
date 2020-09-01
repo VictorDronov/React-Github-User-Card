@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import User from "./User";
+import Follower from "./Follower";
+import { Switch, Route } from "react-router";
 import "./App.css";
 
 class App extends React.Component {
@@ -9,18 +11,19 @@ class App extends React.Component {
     this.state = {
       user: [],
       usersFollowers: [],
+      eachFollower: [],
     };
   }
 
   componentDidMount() {
-    console.log("mount");
+    // console.log("mount");
     axios
       .get("https://api.github.com/users/victorDronov")
       .then((res) => {
         this.setState({
           user: res.data,
         });
-        console.log(res.data);
+        // console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -29,33 +32,33 @@ class App extends React.Component {
     axios
       .get(" https://api.github.com/users/victorDronov/followers")
       .then((res) => {
-        let arrayOfFollowers = res.data;
-        arrayOfFollowers.forEach((persons) => {
-          this.setState({
-            usersFollowers: persons,
-          });
-          console.log(persons);
+        // console.log(res.data)
+        this.setState({
+          usersFollowers: res.data,
         });
       })
       .catch((err) => {
         console.log(err);
       });
   }
+
   componentDidUpdate() {
-    console.log("Update");
+    // console.log("Update");
   }
 
   render() {
-    console.log("render");
+    // console.log("render");
     return (
       <div className="App">
-        <header>
-        <h1>Github User</h1>
-        </header>
-        <User
-          userDetails={this.state.user}
-          followers={this.state.usersFollowers}
-        />
+        <Switch>
+          <Route path="/followers">
+            <Follower followerDetails={this.state.usersFollowers} />
+          </Route>
+
+          <Route path="/">
+            <User userDetails={this.state.user} />
+          </Route>
+        </Switch>
       </div>
     );
   }
