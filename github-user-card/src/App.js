@@ -49,7 +49,9 @@ class App extends React.Component {
     console.log("render");
     return (
       <div className="App">
+        <header>
         <h1>Github User</h1>
+        </header>
         <User
           userDetails={this.state.user}
           followers={this.state.usersFollowers}

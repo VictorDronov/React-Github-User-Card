@@ -1,3 +1,31 @@
 *{
     text-align: center;
+    width: 100%;
+    color: #272932;
+}
+html{
+    background-color: #808A9F;
+    display: flex;
+    justify-content: center;
+}
+img{
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 20px #272932;
+}
+.userCard{
+    padding: 3%;
+    box-shadow: 5px 5px 10px #b6c2d946;
+    background-color: #B6C2D9;
+    border-radius: 15px;
+    width: 80%;
+    margin: auto;
+}
+header{
+    background-color: #B6C2D9;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px 0px #b6c2d96b;
+    width: 100%;
+    padding: 1% 0%;
+    margin-bottom: 3%;
 }

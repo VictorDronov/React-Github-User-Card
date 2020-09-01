@@ -5,9 +5,9 @@ const User = (props) => {
   const { userDetails, followers } = props;
 
   return (
-    <div>
+    <div className="userCard">
       <img src={userDetails.avatar_url} />
-      <h2>Name: {userDetails.login}</h2>
+      <h2>Username: {userDetails.login}</h2>
       <div>
         <p>
           GitHub: <a href={userDetails.html_url}>Profile</a>
